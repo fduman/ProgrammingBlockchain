@@ -1,17 +1,18 @@
-## Bitcoin address {#bitcoin-address}
+## Bitcoin adresi {#bitcoin-address}
 
-You know that your **Bitcoin Address** is what you share to the world to get paid.  
+**Bitcoin Adres** 'inizin ödeme almak için dünya ile paylaştığınız şey olduğunu biliyorsunuz.
+
 ![](../assets/BitcoinAddress.png)  
-You probably know that your wallet software uses a **private key** to spend the money you received on this address.  
+Muhtemelen, bu adrese gelen parayı harcamanız için, cüzdan yazılımınızın bir **özel anahtar** kullandığını biliyorsunuz.  
 ![](../assets/PrivateKey.png)  
 
-The keys are not stored on the network and they can be generated without access to the Internet.  
+Anahtarlar ağ üzerinde depolanmazlar ve İnternet erişimi olmadan üretilebilirler.  
 
-This is how you generate a private key with NBitcoin:  
+NBitcoin kullanılarak bu şekilde bir özel anahtar oluşturulabilir:  
 ```cs  
-Key privateKey = new Key(); // generate a random private key
+Key privateKey = new Key(); // rastgele bir özel anahtar üret
 ```  
-From the private key, we use a one-way cryptographic function, to generate a **public key**.  
+Özel anahtardan, ** genel anahtar * üretmek için tek yönlü bir kriptografik fonksiyon kullanırız.  
 
 ![](../assets/PrivKeyPubKey.png)  
 ```cs 
@@ -19,7 +20,7 @@ PubKey publicKey = privateKey.PubKey;
 Console.WriteLine(publicKey); // 0251036303164f6c458e9f7abecb4e55e5ce9ec2b2f1d06d633c9653a07976560c
 ```  
 
-There are two Bitcoin **networks**: 
+İki Bitcoin ** ağı ** bulunur: 
 * **TestNet** is a Bitcoin network for development purposes. Bitcoins on this network worth nothing.  
 * **MainNet** is the Bitcoin network everybody uses.  
 
